@@ -1,0 +1,11 @@
+---
+- name: removing the required software
+  yum:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - httpd
+    - php
+    - php-mysql
+    - mariadb
+    - mariadb-server
