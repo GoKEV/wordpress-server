@@ -16,12 +16,11 @@
   with_items:
     - unzip
     - MySQL-python
-    - mysql-connector-python
+#    - mysql-connector-python
     - policycoreutils-python
     - httpd
     - php
     - php-mysql
     - mariadb
     - mariadb-server
-    - libselinux-python
-  ignore_errors: yes
+#    - libselinux-python

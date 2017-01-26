@@ -15,11 +15,18 @@
     path: "{{ wpwebpath }}"
   register: iswpwebpath
 
-- name: "download and unarchive wordpress latest to {{ wpdlpath }}"
+
+- name: download WP
+  get_url:
+    url: 'https://wordpress.org/latest.zip'
+    dest: /tmp/latest.zip
+    mode: 0644
+
+- name: "unarchive wordpress latest to {{ wpdlpath }}"
   unarchive:
-    src: 'https://wordpress.org/latest.zip'
-    dest: "{{ wpdlpath }}"
-#    remote_src: True
+    src: "/tmp/latest.zip"
+    dest: "/tmp/"
+    remote_src: True
   when: iswpwebpath.stat.exists == False
 
 - name: "Copy files from {{ wpdlpath }} to {{ wpwebpath }}"
