@@ -19,7 +19,7 @@
   unarchive:
     src: 'https://wordpress.org/latest.zip'
     dest: "{{ wpdlpath }}"
-    remote_src: True
+#    remote_src: True
   when: iswpwebpath.stat.exists == False
 
 - name: "Copy files from {{ wpdlpath }} to {{ wpwebpath }}"
