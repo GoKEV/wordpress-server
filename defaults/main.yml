@@ -1,6 +1,6 @@
 ---
 # defaults file for wordpress-server
-wpsource: "https://wordpress.org/latest.zip"
+wpsource: 'https://wordpress.org/latest.zip'
 wptmppath: "/tmp/wordpress"
 wpdlpath: "/tmp"
 httpdconf: "/etc/httpd/conf/httpd.conf"
