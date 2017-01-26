@@ -18,3 +18,4 @@
       when: safety_word is undefined or safety_word != "wordpress-install"
 
     - include: tasks/main.yml
+      ignore_errors: yes
