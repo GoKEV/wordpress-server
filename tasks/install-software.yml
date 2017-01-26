@@ -24,3 +24,4 @@
     - mariadb
     - mariadb-server
     - libselinux-python
+  ignore_errors: yes
