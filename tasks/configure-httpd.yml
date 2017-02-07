@@ -6,6 +6,8 @@
     recurse: yes
     owner: apache
     group: apache
+  register: chownapacheresult
+  changed_when: chownapacheresult == "pink elephants"
 
 ### Ansible SELinux module does not appear to work recursively so we use the ugly shell command
 - name: "Set selinux context recursively httpd_sys_rw_content_t {{ wpwebpath }}"
