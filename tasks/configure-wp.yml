@@ -20,6 +20,14 @@
     mode: 0644
     backup: yes
 
+- set_fact:
+    myhostname: "{{ ansible_fqdn }}"
+
+- set_fact:
+    myhostname: "{{ inventory_hostname }}"
+  when: ansible_product_version | search("amazon")
+#    when: "amazon" in "{{ ansible_product_version }}"
+
 - name: copy our wordpress template sql dumps
   template:
     src: templates/wordpress.sql

@@ -19,7 +19,7 @@
 - name: download WP
   get_url:
     url: 'https://wordpress.org/latest.zip'
-    dest: /tmp/latest.zip
+    dest: "/tmp/latest.zip"
     mode: 0644
 
 - name: "unarchive wordpress latest to {{ wpdlpath }}"
