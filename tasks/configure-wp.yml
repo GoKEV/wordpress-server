@@ -51,7 +51,15 @@
     mode: 0644
     backup: yes
 
-- name: "Remove {{ wpwebpath }} if it still exists"
+- name: copy graphics for our first post
+  copy:
+    src: templates/automate_all_the_things.png
+    dest: "{{ wpwebpath }}/wp-content/themes/twentyseventeen/assets/images/automate_all_the_things.png"
+    owner: apache
+    group: apache
+    mode: 0644
+
+- name: "Remove wordpress.sql template database if it still exists"
   file:
     path: /tmp/wordpress.sql
     state: absent
