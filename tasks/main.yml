@@ -1,6 +1,6 @@
 ---
 # tasks file for wordpress-server
-#- include: firewall.yml
+- include: firewall.yml
 - include: install-software.yml
 - include: install-wppackage.yml
 - include: services-initial.yml
